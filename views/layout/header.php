@@ -6,6 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+       <!-- Font awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- jQuery -->
         <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-2.1.1.min.js"></script>
         <!-- Materialize -->

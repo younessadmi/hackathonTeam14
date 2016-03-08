@@ -1,0 +1,18 @@
+div#img-hotel{
+    background: url('img/best-western-opera.jpg') no-repeat;
+    min-height: 62vh;
+}
+table{
+    width: 100%;   
+}
+table tr td{
+    text-align: center;
+    color: #013E88;
+}
+table tr td.off{
+    color: #c7c7c7;
+}
+
+a{
+     color: inherit;
+}

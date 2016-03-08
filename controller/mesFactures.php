@@ -1,5 +1,5 @@
 <?php
-class indexController extends baseController {
+class mesFacturesController extends baseController {
 
     public function index(){        
         $this->registry->template->show('index');
