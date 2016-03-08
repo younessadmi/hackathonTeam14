@@ -1,0 +1,7 @@
+header nav {
+    background: url('../img/navbar-background.png');
+}
+
+nav .brand-logo {
+    left: 27%;
+}
