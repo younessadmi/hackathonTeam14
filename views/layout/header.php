@@ -8,6 +8,8 @@
 
        <!-- Font awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Animate.css -->
+        <link type="text/css" rel="stylesheet" href="<?php echo BASE_URL;?>css/animate.css"  media="screen,projection"/>
         <!-- jQuery -->
         <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-2.1.1.min.js"></script>
         <!-- Materialize -->

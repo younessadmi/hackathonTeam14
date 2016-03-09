@@ -1,0 +1,22 @@
+.historic-bill a{
+ 	height: 50px;
+ 	padding: 5px;
+ 	vertical-align: middle;
+ 	padding-top: 20px
+}
+
+.collection .collection-item.active {
+	background-color: #013E88 !important;
+}
+
+.collection a.collection-item {
+	color: #013E88 !important;
+}
+
+.collection a.collection-item.active {
+	color: #fff !important;
+}
+
+h2 {
+	font-size: 25px
+}
