@@ -3,21 +3,20 @@
 	<h2>Mes factures</h2>
 
 	<div class="collection historic-bill">
-	    <a href="#!" class="collection-item active show-actual-bill-detail">Facture 10 <div class="chip pull-right">En cours</div></a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 9</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 8</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 7</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 6</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 5</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 4</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 3</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 2</a>
-	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 1</a>
+	    <a href="#!" class="collection-item active show-actual-bill-detail">Facture 6 <i class="fa fa-history pull-right" style="color:orange;font-size:30px"></i></a>
+	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 5 <i class="fa fa-check pull-right" style="color:green;font-size:30px"></i></a>
+	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 4 <i class="fa fa-check pull-right" style="color:green;font-size:30px"></i></a>
+	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 3 <i class="fa fa-check pull-right" style="color:green;font-size:30px"></i></a>
+	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 2 <i class="fa fa-check pull-right" style="color:green;font-size:30px"></i></a>
+	    <a href="#!" class="collection-item show-historic-bill-detail">Facture 1 <i class="fa fa-check pull-right" style="color:green;font-size:30px"></i></a>
 	</div>
 </section>
 
 <section class="actual-bill-detail" style="display:none">
-	<h2>Facture actuelle</h2>
+	<button class="btn-back-list-bill-actual">
+		<i class="fa fa-chevron-left" style="font-size:20px"></i>
+	</button>
+	<h2>Détail Facture actuelle</h2>
 	<table>
         <thead>
           <tr>
@@ -44,10 +43,50 @@
             <td></td>
           </tr>
         </tbody>
-      </table>
+    </table>
 </section>
 
 
-<section class="hitoric-bill-detail" style="display:none">
-	<h2>Detail historique</h2>
+<section class="historic-bill-detail" style="display:none">
+	<button class="btn-back-list-bill-historic">
+		<i class="fa fa-chevron-left" style="font-size:20px"></i>
+	</button>
+	<h2>Détail historique</h2>
+	<table>
+        <thead>
+          <tr>
+              <th data-field="name">Produit</th>
+              <th data-field="price">Price</th>
+              <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Chambre simple deluxe (3nuits)</td>
+            <td>320€</td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Champagne</td>
+            <td>80€</td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Durex</td>
+            <td>30€</td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Session de Golf</td>
+            <td>50€</td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>480€</td>
+            <td></td>
+          </tr>
+        </tbody>
+    </table>
 </section>
