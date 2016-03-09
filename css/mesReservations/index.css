@@ -1,0 +1,24 @@
+div#button-list{
+    margin-top: 10px;
+    text-align: center;
+}
+
+div#button-list button{
+    width: 49%;
+    background: url('img/navbar-background.png');
+/*    background: #013E88;*/
+}
+
+section#a-venir, section#historique{
+    display: none;
+}
+
+.collection .collection-item{
+    color: #013E88 !important;
+    
+}
+
+.collection .collection-item.active{
+    background-color: #013E88 !important;
+    color: #fff !important;
+}
