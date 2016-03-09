@@ -1,5 +1,10 @@
 
 <section class="list-bill">
+	<a class="back-to-main" href="<?php echo BASE_URL;?>"> 
+		<button>
+		<i class="fa fa-chevron-left" style="font-size:25px"></i>
+		</button>
+	</a>
 	<h2>Mes factures</h2>
 
 	<div class="collection historic-bill">
@@ -14,7 +19,7 @@
 
 <section class="actual-bill-detail" style="display:none">
 	<button class="btn-back-list-bill-actual">
-		<i class="fa fa-chevron-left" style="font-size:20px"></i>
+		<i class="fa fa-chevron-left" style="font-size:25px"></i>
 	</button>
 	<h2>Détail Facture actuelle</h2>
 	<table>
@@ -49,7 +54,7 @@
 
 <section class="historic-bill-detail" style="display:none">
 	<button class="btn-back-list-bill-historic">
-		<i class="fa fa-chevron-left" style="font-size:20px"></i>
+		<i class="fa fa-chevron-left" style="font-size:25px"></i>
 	</button>
 	<h2>Détail historique</h2>
 	<table>
@@ -63,7 +68,7 @@
 
         <tbody>
           <tr>
-            <td>Chambre simple deluxe (3nuits)</td>
+            <td>Chambre double deluxe (3nuits)</td>
             <td>320€</td>
             <td><i class="fa fa-check"></i></td>
           </tr>
@@ -89,4 +94,6 @@
           </tr>
         </tbody>
     </table>
+
+    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 </section>

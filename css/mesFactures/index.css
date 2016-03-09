@@ -18,7 +18,8 @@
 }
 
 h2 {
-	font-size: 25px
+	font-size: 25px;
+	margin-top:0;
 }
 
 button {
@@ -26,4 +27,13 @@ button {
 	  color: black !important;
 	  border: none;
 	  padding: 10px
+}
+
+.btn-cta-pdf {
+	background-color: #013E88 !important;
+	margin-left:80px;
+	color:#fff !important;
+}
+a.back-to-main {
+	color: black;
 }
