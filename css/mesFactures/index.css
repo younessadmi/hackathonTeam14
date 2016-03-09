@@ -20,3 +20,10 @@
 h2 {
 	font-size: 25px
 }
+
+button {
+	  background: transparent !important;
+	  color: black !important;
+	  border: none;
+	  padding: 10px
+}
