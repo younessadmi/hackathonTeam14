@@ -17,6 +17,9 @@
 </section>
 
 <section class="actual-bill-detail" style="display:none">
+	<div>
+		<i class="fa fa-chevron-left"></i>
+	</div>
 	<h2>Facture actuelle</h2>
 	<table>
         <thead>
@@ -49,5 +52,8 @@
 
 
 <section class="hitoric-bill-detail" style="display:none">
+	<div>
+		<i class="fa fa-chevron-left"></i>
+	</div>
 	<h2>Detail historique</h2>
 </section>
