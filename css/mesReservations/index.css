@@ -1,60 +1,49 @@
 h2{
     font-size: 25px;
-}
-
-div#button-list{
-    /*    margin-top: 10px;*/
-    text-align: center;
-}
-
-div#button-list button{
-    width: 49%;
-    background: url('img/navbar-background.png');
-    /*    background: #013E88;*/
+    margin-top: 0;
 }
 
 div#coordonnees p{
     font-size: 12px;
-}
-section#a-venir, section#historique{
-    display: none;
+    padding: 1rem;
 }
 
-.collection .collection-item{
-    color: #013E88 !important;
-
-}
-
-.collection .collection-item.active{
-    background-color: #013E88 !important;
-    color: #fff !important;
-}
-section#en-cours {
+.collapsible-body {
     padding: 10px;
 }
-section#en-cours img#qr-code{
+img#qr-code{
     width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-section#en-cours p#hotel-name{
+p#hotel-name{
     font-weight: bold;
     text-align: center;
 }
 
-section#en-cours div#info-resa{
+div#coordonnees{
     position: relative;
-}
-div#info-resa{
     background: #013E88;
     color: #fff;
     padding: 5px;
+    border-radius: 3px;
 }
-div#info-resa i.fa-bookmark{
+div#coordonnees i.fa-bookmark{
     position: absolute;
     top: 0px;
     right: 5px;
     color: #fff;
+}
+
+a.back-to-main {
+    color: black;
+}
+a.back-to-main button{
+
+    background: transparent !important;
+    color: black !important;
+    border: none;
+    padding: 10px; 
 }
