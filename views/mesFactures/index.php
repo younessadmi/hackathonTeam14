@@ -43,7 +43,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>Durex</td>
+            <td>Panier repas</td>
             <td>10€</td>
             <td></td>
           </tr>
@@ -78,7 +78,7 @@
             <td><i class="fa fa-check"></i></td>
           </tr>
           <tr>
-            <td>Durex</td>
+            <td>Badoit</td>
             <td>30€</td>
             <td><i class="fa fa-check"></i></td>
           </tr>
