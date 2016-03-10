@@ -1,0 +1,26 @@
+.circle {
+    width: 20%;
+}
+.prix, .title{
+    font-weight: bold;
+}
+
+#extras-restauration ul li i{
+    color: #013E88;   
+}
+.modal-footer a{
+    color: #fff;   
+}
+.modal-footer a.cancel{
+    background: #F44336;
+}
+
+.modal-footer a.buy{
+    background: #4CAF50;
+}
+
+.modal img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

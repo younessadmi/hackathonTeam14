@@ -1,0 +1,58 @@
+h2{
+    font-size: 25px;
+    margin-top: 0;
+}
+
+a.back-to-main {
+    color: black;
+}
+a.back-to-main button{
+
+    background: transparent !important;
+    color: black !important;
+    border: none;
+    padding: 10px; 
+}
+
+#extras{
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#extras .extra{
+    width: 50%;
+    text-align: center;
+}
+
+#extras p{
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 33%;
+    left: 45.5%;
+}
+
+.extra{
+    color: #013E88;    
+}
+.extra a {
+    color: inherit;    
+}
+
+.extra.top-left{
+    border-right: solid 1px #013E88;
+    border-bottom: solid 1px #013E88;
+}
+.extra.top-right{
+    border-left: solid 1px #013E88;
+    border-bottom: solid 1px #013E88;
+}
+.extra.bottom-left{
+    border-right: solid 1px #013E88;
+}
+.extra.bottom-right{
+    border-left: solid 1px #013E88;
+}
