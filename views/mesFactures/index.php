@@ -80,7 +80,7 @@
 			          </tr>
 			        </tbody>
 			    </table>
-
+			    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 	      </div>
 	    </li>
 	    <li>
@@ -123,7 +123,7 @@
 			          </tr>
 			        </tbody>
 			    </table>
-
+			    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 	      </div>
 	    </li>
 	    <li>
@@ -166,7 +166,7 @@
 			          </tr>
 			        </tbody>
 			    </table>
-
+			    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 	      </div>
 	    </li>
 	    <li>
@@ -209,7 +209,7 @@
 			          </tr>
 			        </tbody>
 			    </table>
-
+			    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 	      </div>
 	    </li>
 	    <li>
@@ -252,30 +252,8 @@
 			          </tr>
 			        </tbody>
 			    </table>
-
+			    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 	      </div>
-	    </li>
-	    
+	    </li> 
   </ul>
-</section>
-
-
-
-<section class="actual-bill-detail" style="display:none">
-	<button class="btn-back-list-bill-actual">
-		<i class="fa fa-chevron-left" style="font-size:25px"></i>
-	</button>
-	<h2>Détail Facture actuelle</h2>
-	
-</section>
-
-
-<section class="historic-bill-detail" style="display:none">
-	<button class="btn-back-list-bill-historic">
-		<i class="fa fa-chevron-left" style="font-size:25px"></i>
-	</button>
-	<h2>Détail historique</h2>
-	
-
-    <button class="waves-effect waves-light btn btn-cta-pdf" style=""><i class="fa fa-file-pdf-o" style="margin-right:10px"></i>Générer PDF</button>
 </section>
