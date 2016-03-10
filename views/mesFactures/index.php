@@ -8,9 +8,9 @@
 	<h2>Mes factures</h2>
 
 	<ul class="collapsible popout" data-collapsible="accordion">
-	    <li>
-	      <div class="collapsible-header">Facture 6<i class="fa fa-history" style="color:orange;font-size:30px"></i></div>
-	      <div class="collapsible-body">
+	    <li class="active">
+	      <div class="collapsible-header active">Facture 6<i class="fa fa-history" style="color:orange;font-size:30px"></i></div>
+	      <div class="collapsible-body active">
 	      		<table>
 			        <thead>
 			          <tr>

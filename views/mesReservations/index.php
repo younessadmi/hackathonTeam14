@@ -6,12 +6,12 @@
 <h2>Mes réservations</h2>
 
 <ul class="collapsible popout" data-collapsible="accordion">
-    <li>
-        <div class="collapsible-header">
+    <li class="active">
+        <div class="collapsible-header active">
             <span>Best Western PREMIER Opéra Liège</span>
             <p><i class="fa fa-history" style="color:orange;"></i> Du 09/03/2016 au 14/03/2016</p>
         </div>
-        <div class="collapsible-body">
+        <div class="collapsible-body active">
             <section id="en-cours">
                 <div id="coordonnees">
                     <p id="hotel-name">Best Western PREMIER Opéra Liège</p>
