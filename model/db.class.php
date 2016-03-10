@@ -10,14 +10,12 @@ class DB {
         }
         return self::$instance;
     }
-    
     public function __clone() {
         trigger_error('Clone is not allowed.', E_USER_ERROR);
     }
     public function __wakeup() {
         trigger_error('Deserializing is not allowed.', E_USER_ERROR);
     }
-
     private function __construct($registry) {
         $this->registry = $registry;
         if(USING_A_DB == true){
@@ -30,5 +28,24 @@ class DB {
                 die();
             }
         }
+    }
+
+    public function orderProduct($productName, $idClient, $qte){
+        $query = $this->connexion->prepare('
+        INSERT INTO orderProduct(id_product, id_client) 
+        SELECT (SELECT id FROM product WHERE name=? ), ?
+        ');
+
+        $query2 = $this->connexion->prepare('
+        UPDATE product 
+        SET actual_stock = actual_stock - ? 
+        WHERE name=?
+        ');
+
+        if($query->execute([$productName, $idClient])){
+            if($query2->execute([$qte, $productName])){
+                return true;
+            }else return $query->errorInfo();
+        }else return $query->errorInfo();
     }
 }

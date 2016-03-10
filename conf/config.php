@@ -1,6 +1,6 @@
 <?php
 //Global define
-DEFINE('BASE_URL', 'http://localhost/hackathonTeam14/');
+DEFINE('BASE_URL', 'http://'.$_SERVER['SERVER_NAME'].'/hackathonTeam14/');
 DEFINE('APP_TITLE', '');
 DEFINE('APP_VERSION', '');
 DEFINE('LOG_DIRECTORY', DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR);

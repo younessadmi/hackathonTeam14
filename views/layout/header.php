@@ -4,7 +4,9 @@
         <title><?php echo $this->getTitle();?></title>        
         <link rel="icon" href="<?php echo BASE_URL;?>img/favicon.ico">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+
 
        <!-- Font awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
