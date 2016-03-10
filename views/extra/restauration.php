@@ -1,3 +1,8 @@
+<a class="back-to-main" href="<?php echo BASE_URL;?>extra"> 
+    <button>
+        <i class="fa fa-chevron-left" style="font-size:25px"></i>
+    </button>
+</a>
 <div id="extras-restauration">
     <ul class="collection with-header">
         <li class="collection-header"><h4>Restauration</h4></li>

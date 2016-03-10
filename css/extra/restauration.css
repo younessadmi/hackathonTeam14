@@ -24,3 +24,14 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+a.back-to-main {
+    color: black;
+}
+a.back-to-main button{
+
+    background: transparent !important;
+    color: black !important;
+    border: none;
+    padding: 10px; 
+}
