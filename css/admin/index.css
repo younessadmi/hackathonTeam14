@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?php echo $this->getTitle();?></title>        
+        <link rel="icon" href="<?php echo BASE_URL;?>img/favicon.ico">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font awesome -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- jQuery -->
+        <script type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-2.1.1.min.js"></script>
+
+        <!-- Materialize -->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="<?php echo BASE_URL;?>css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="<?php echo BASE_URL;?>js/materialize.min.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
+
+
+        <!-- My Scripts -->
+        <link href="<?php echo BASE_URL;?>css/mystyle.css" rel="stylesheet" type="text/css">
+        <script src="<?php echo BASE_URL;?>js/functions.js"></script>
+    </head>
+    <body>
+        <header>
+            
+            <?php if($admin){ ?>
+            <div id="wrapper">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <a href="<?php echo BASE_URL;?>admin/customers"><li class="center-align sidebar-icon"><i class="fa fa-user fa-2x"></i></li></a>
+                        <a href="<?php echo BASE_URL;?>admin/bill"><li class="center-align sidebar-icon"><i class="fa fa-dollar fa-2x"></i></li></a>
+                        <a href="<?php echo BASE_URL;?>admin/rooms"><li class="center-align sidebar-icon"><i class="fa fa-bed fa-2x"></i></li></a>
+                        <a href="<?php echo BASE_URL;?>admin/booking"><li class="center-align sidebar-icon"><i class="fa fa-calendar fa-2x"></i></li></a>
+                    </ul>
+                </div>
+                <span id="picture-info-hidden" style="display:none"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
+                <div id="sidebar-wrapper-infos">
+                    <a href="#!" class="brand-logo center">
+                        <img src="<?php echo BASE_URL;?>img/bestwestern.png" id="brand"/>
+                    </a>
+                    <div id="infos-sidebar">
+                        <span id="picture-info"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
+                        <p>info</p>
+                        <p>info</p>
+                        <p>info</p>
+                        <p>info</p>
+                        <p>info</p>
+                    </div>
+
+                </div>
+               
+            </div>
+            <?php }else{ ?>
+            <?php } ?>
+
+        </header>

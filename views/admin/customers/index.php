@@ -1,172 +1,274 @@
-<div class="container">
-    <div class="row">
-        <div class="col s2 offset-s5 title">
-            ROOMS
-        </div>
-    </div>
-    
-    <div class="row label-rooms">
-        <div class="col s1 index-list">N°</div>
-        <div class="col s10 index-list">INFORMATIONS</div>
-        <div class="col s1 index-list">STATUS</div>
-    </div>
-    <div class="row label-fixed" style="display:none">
-        <div class="col s1 index-list">N°</div>
-        <div class="col s10 index-list">INFORMATIONS</div>
-        <div class="col s1 index-list">STATUS</div>
-    </div>
-    
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">01</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-blue"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef,  ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">02</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-gold"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique:</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon not-good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">03</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-diamond-select"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon not-good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">04</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-diamond"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef, ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">05</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-diamond"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef </span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">06</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-blue"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique:</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">07</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-diamond-select"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique:</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">08</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-platinium"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">09</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-gold"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef,  ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">10</div>
-            <div class="col s10">
-                <span><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <span class="pull-right rank-diamond-select"><i class="fa fa-diamond fa-1x"></i> 13500</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef, ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    
-    <div class="col s12 pagination-custom">
-        <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-        </ul>
-    </div>
-</div>
+<div class="container-custom">
 
+    <div class="container-title row">
+        CLIENTS
+    </div>
+
+    <div class="datatable filter row">
+        <div class="input-field col s1">
+            <input id="id" type="text" class="validate">
+            <label for="last_name">ID</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="grade" type="text" class="validate">
+            <label for="name">Grade</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="pays" type="text" class="validate">
+            <label for="name">Pays</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="societe" type="text" class="validate">
+            <label for="name">Société</label>
+        </div>        
+    </div>
+
+    <tbody>
+
+    </tbody>
+
+    <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Grade</th>
+                <th>Pays</th>
+                <th>Société</th>
+                <th class="status">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td name="id">1</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled checked type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">2</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled checked type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">3</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">4</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled checked type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">5</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled checked type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">6</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">7</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">8</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">9</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">10</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">11</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">12</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">13</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled checked type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">14</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td name="id">15</td>
+                <td name="Nom">Doris Wilder</td>
+                <td name="Grade">Diamond Select</td>
+                <td name="Pays">Mexique</td>
+                <td name="Société">Google</td>
+                <td class="status" name="Status">
+                    <div class="switch">
+                        <label>
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
