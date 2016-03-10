@@ -1,0 +1,49 @@
+h2{
+    font-size: 25px;
+    margin-top: 0;
+}
+
+div#coordonnees p{
+    font-size: 12px;
+    padding: 1rem;
+}
+
+.collapsible-body {
+    padding: 10px;
+}
+img#qr-code{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p#hotel-name{
+    font-weight: bold;
+    text-align: center;
+}
+
+div#coordonnees{
+    position: relative;
+    background: #013E88;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+div#coordonnees i.fa-bookmark{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: #fff;
+}
+
+a.back-to-main {
+    color: black;
+}
+a.back-to-main button{
+
+    background: transparent !important;
+    color: black !important;
+    border: none;
+    padding: 10px; 
+}
