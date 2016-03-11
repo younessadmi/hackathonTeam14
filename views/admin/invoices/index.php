@@ -42,8 +42,7 @@
                 <th style="display:none"></th>
             </tr>
         </thead>
-        <tbody>
-            
+        <tbody>        
             <?php foreach ($invoices['invoices'] as &$value) { ?>
             <tr>
                 <td name="id"><?php echo $value['id'] ?></td>
@@ -60,7 +59,21 @@
                     <a href="<?php echo BASE_URL;?>admin/invoices/<?php echo $value['id'] ?>" class="waves-effect waves-light btn btn-action"><i class="fa fa-share-square-o"></i></a>
                 </td>
                 <td style="display:none">
-
+                    <p name="id"><?php echo $value['id_client'] ?></p>
+                    <p name="Nom"><?php echo $value['name'].' '.$value['firstname'] ?></p>
+                    <p name="Grade"><?php echo $value['rank'] ?></p>
+                    <p name="Pays"><?php echo $value['country'] ?></p>
+                    <p name="Société"><?php echo $value['company'] ?></p>
+                    <p name="Email"><?php echo $value['email'] ?></p>
+                    <p name="Téléphone"><?php echo $value['phone'] ?></p>
+                    <p name="Addresse"><?php echo $value['address'] ?></p>
+                    <p name="Présent">
+                        <?php if($value['present']){ ?>
+                            OUI
+                        <?php }else{ ?>
+                            NON
+                        <?php }?>
+                    </p>
                 </td>
             </tr>
             <?php } ?>
