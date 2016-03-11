@@ -70,12 +70,33 @@ class DB {
     
     public function getInvoices(){
         $return = [];
-        $rooms = $this->connexion->prepare('SELECT * FROM bill');
-        if($rooms->execute()){
-            $return['invoices'] = $rooms->fetchAll(PDO::FETCH_ASSOC);
+        $invoices = $this->connexion->prepare('SELECT * FROM bill');
+        if($invoices->execute()){
+            $return['invoices'] = $invoices->fetchAll(PDO::FETCH_ASSOC);
             foreach($return['invoices'] as &$invoice){
                  
             }
+            return $return;
+        }else return $query->errorInfo();
+    }
+    
+    public function getBookings(){
+        $return = [];
+        $bookings = $this->connexion->prepare('SELECT * FROM reservation');
+        if($bookings->execute()){
+            $return['bookings'] = $bookings->fetchAll(PDO::FETCH_ASSOC);
+            foreach($return['bookings'] as &$booking){
+                 
+            }
+            return $return;
+        }else return $query->errorInfo();
+    }
+    
+    public function getCustomerBookings($id){
+        $return = [];
+        $bookings = $this->connexion->prepare('SELECT * FROM reservation WHERE id_client = ?');
+        if($bookings->execute([id])){
+            $return['bookings'] = $bookings->fetchAll(PDO::FETCH_ASSOC);
             return $return;
         }else return $query->errorInfo();
     }

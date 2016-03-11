@@ -15,13 +15,18 @@ class adminController extends baseController {
     public function rooms(){        
         if(isset($_GET['customer'])){
             //$this->registry->template->rooms = $this->registry->db->getRooms($_GET['customer']);
-            $this->registry->template->customer = $this->registry->db->getCustomer($_GET['customer']);
+            $this->registry->template->customer = $this->registry->db->getCustomer($_GET["customer"]);
         }else
             $this->registry->template->rooms = $this->registry->db->getRooms();
         $this->registry->template->show('rooms/index');
     }
     
-    public function booking(){        
+    public function booking(){    
+        if(isset($_GET['customer'])){
+            $this->registry->template->bookings = $this->registry->db->getCustomerBookings($_GET['customer']);
+            $this->registry->template->customer = $this->registry->db->getCustomer($_GET['customer']);
+        }else
+            $this->registry->template->bookings = $this->registry->db->getBookings();
         $this->registry->template->show('booking/index');
     }
     

@@ -56,8 +56,6 @@ $(document).ready(function(){
                         $info.each( function(e){
                             if($(this).attr("name") != "id")
                                 $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
-                            else
-                                $idUrl = $(this).html();
 
                         });
 
@@ -97,8 +95,6 @@ $(document).ready(function(){
         $('#datatable tbody tr').first().children().last().children().each( function(e){
             if($(this).attr("name") != "id")
                 $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
-            else
-                $idUrl = $(this).html();
         });
         $('#datatable tbody tr').first().css("border","solid 1px #38A7C6");
         $('#infos-sidebar').append(

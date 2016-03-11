@@ -66,6 +66,9 @@
                                     NON
                                 <?php }?></b>
                             </p>
+                            <p><a href="<?php echo BASE_URL;?>admin/invoices?customer=<?php echo $customer['id'] ?>" class="waves-effect waves-light btn btn-infos"><i class="fa fa-dollar left"></i>Factures</a></p>
+                            <p><a href="<?php echo BASE_URL;?>admin/booking?customer=<?php echo $customer['id'] ?>" class="waves-effect waves-light btn btn-infos"><i class="fa fa-calendar left"></i>Reservations</a></p>
+                            <p><a href="<?php echo BASE_URL;?>admin/rooms?customer=<?php echo $customer['id'] ?>" class="waves-effect waves-light btn btn-infos"><i class="fa fa-bed left"></i>Chambres</a></p>
                         <?php } ?>  
                     </div>
 

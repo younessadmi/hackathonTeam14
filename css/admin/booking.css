@@ -1,0 +1,184 @@
+header nav {
+    background: #26323f;
+}
+
+nav .brand-logo {
+    left: 27%;
+    
+}
+
+.pagination li.active{
+    background-color: transparent !important;
+}
+
+.rank-blue {
+    color: #00b0ff
+}
+
+.rank-gold {
+    color: #ffd600
+}
+
+.rank-platinium {
+    color: #b0bec5
+}
+
+.rank-diamond {
+    color: #ffffff;
+    text-shadow: -1px 0 #807f7f, 0 1px #807f7f, 1px 0 #807f7f, 0 -1px #807f7f;
+}
+
+.rank-diamond-select {
+    color: #263238;
+    text-shadow: -1px 0 #c4c2c2, 0 1px #c4c2c2, 1px 0 #c4c2c2, 0 -1px #c4c2c2;
+}
+
+#wrapper {
+    transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+    width: 80px;
+    background: #38A7C6;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper-infos {
+    margin-left:80px;
+    width: 300px;
+    background: #26323f;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+    text-align: center;
+}
+
+#brand {
+    padding-top: 20px;
+    padding-bottom: 20px;   
+}
+
+#infos-sidebar {
+    color: #fff;
+}
+
+#page-content-wrapper {
+    padding-left:380px;
+}
+
+.navbar {
+    border: none;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        left: 0;
+    }
+
+    #wrapper.active {
+        position: relative;
+        left: 80px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+        width: 80px;
+        transition: all 0.4s ease 0s;
+    }
+
+}
+
+.container-custom {
+    margin-left: 450px;
+    padding-right: 70px;
+    padding-top: 30px;
+}
+
+.sidebar-icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar-icon.active{
+    background: #2492b2;
+}
+
+.sidebar-icon i{
+    color: #fff;
+}
+
+.table.table-bordered.dataTable {
+  border-collapse: collapse !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #E6F2FF;
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: none;
+}
+
+.table-bordered {
+    border:none;
+} 
+
+.status {
+    text-align:center;
+}
+
+#picture-info img {
+    margin-bottom: 20px;
+}
+
+#datatable_filter {
+    display:none;
+}
+
+.container-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#datatable tbody tr:hover {
+    cursor: pointer;
+    opacity:0.5;
+}
+
+#infos-sidebar p {
+    padding-left:40px; 
+    padding-right:40px;
+    text-align:left;
+}
+
+.btn-infos {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background: #38A7C6;
+    margin-top:10px;
+}
+
+.btn-infos:hover {
+    background-color: #fff;
+}
