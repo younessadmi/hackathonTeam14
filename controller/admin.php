@@ -11,7 +11,8 @@ class adminController extends baseController {
     }
 
     public function index(){        
-        $this->registry->template->show('index');
+//        $this->registry->template->show('index');
+        header('Location: '.BASE_URL.'admin/customers');
     }
 
     public function rooms(){        
