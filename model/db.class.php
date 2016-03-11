@@ -58,7 +58,7 @@ class DB {
     
     public function getRooms(){
         $return = [];
-        $rooms = $this->connexion->prepare('SELECT * FROM room');
+        $rooms = $this->connexion->prepare('SELECT room.*, client.name, client.firstname, client.country, client.address, client.email, client.phone, client.rank, client.company, client.present FROM room JOIN client on client.id = room.id_client');
         if($rooms->execute()){
             $return['rooms'] = $rooms->fetchAll(PDO::FETCH_ASSOC);
             foreach($return['rooms'] as &$room){
@@ -70,19 +70,16 @@ class DB {
     
     public function getInvoices(){
         $return = [];
-        $invoices = $this->connexion->prepare('SELECT * FROM bill');
+        $invoices = $this->connexion->prepare('SELECT bill.*, client.name, client.firstname, client.country, client.address, client.email, client.phone, client.rank, client.company, client.present FROM bill JOIN client on client.id = bill.id_client');
         if($invoices->execute()){
             $return['invoices'] = $invoices->fetchAll(PDO::FETCH_ASSOC);
-            foreach($return['invoices'] as &$invoice){
-                 
-            }
             return $return;
         }else return $query->errorInfo();
     }
     
     public function getBookings(){
         $return = [];
-        $bookings = $this->connexion->prepare('SELECT * FROM reservation');
+        $bookings = $this->connexion->prepare('SELECT reservation.*, client.name, client.firstname, client.country, client.address, client.email, client.phone, client.rank, client.company, client.present FROM reservation JOIN client on client.id = reservation.id_client');
         if($bookings->execute()){
             $return['bookings'] = $bookings->fetchAll(PDO::FETCH_ASSOC);
             foreach($return['bookings'] as &$booking){
@@ -95,10 +92,28 @@ class DB {
     public function getCustomerBookings($id){
         $return = [];
         $bookings = $this->connexion->prepare('SELECT * FROM reservation WHERE id_client = ?');
-        if($bookings->execute([id])){
+        if($bookings->execute([$id])){
             $return['bookings'] = $bookings->fetchAll(PDO::FETCH_ASSOC);
             return $return;
-        }else return $query->errorInfo();
+        }else return $bookings->errorInfo();
+    }
+    
+    public function getCustomerInvoices($id){
+        $return = [];
+        $invoices = $this->connexion->prepare('SELECT * FROM bill WHERE id_client = ?');
+        if($invoices->execute([$id])){
+            $return['invoices'] = $invoices->fetchAll(PDO::FETCH_ASSOC);
+            return $return;
+        }else return $invoices->errorInfo();
+    }
+    
+    public function getCustomerRooms($id){
+        $return = [];
+        $rooms = $this->connexion->prepare('SELECT * FROM room WHERE id_client = ?');
+        if($rooms->execute([$id])){
+            $return['rooms'] = $rooms->fetchAll(PDO::FETCH_ASSOC);
+            return $return;
+        }else return $rooms->errorInfo();
     }
     
     public function getCustomer($id){

@@ -42,7 +42,7 @@
             <?php foreach ($rooms['rooms'] as &$value) { ?>
             <tr>
                 <td name="id"><?php echo $value['id'] ?></td>
-                <td name="Nb"><?php echo $value['nb'].' '.$value['firstname'] ?></td>
+                <td name="Nb"><?php echo $value['nb'] ?></td>
                 <td name="Type"><?php echo $value['type'] ?></td>
                 <td name="Nettoyé">
                     <?php if($value['clean']){ ?>
@@ -52,7 +52,21 @@
                     <?php }?>
                 </td>
                 <td style="display:none">
-                    
+                    <p name="id"><?php echo $value['id_client'] ?></p>
+                    <p name="Nom"><?php echo $value['name'].' '.$value['firstname'] ?></p>
+                    <p name="Grade"><?php echo $value['rank'] ?></p>
+                    <p name="Pays"><?php echo $value['country'] ?></p>
+                    <p name="Société"><?php echo $value['company'] ?></p>
+                    <p name="Email"><?php echo $value['email'] ?></p>
+                    <p name="Téléphone"><?php echo $value['phone'] ?></p>
+                    <p name="Addresse"><?php echo $value['address'] ?></p>
+                    <p name="Présent">
+                        <?php if($value['present']){ ?>
+                            OUI
+                        <?php }else{ ?>
+                            NON
+                        <?php }?>
+                    </p>
                 </td>
             </tr>
             <?php } ?>

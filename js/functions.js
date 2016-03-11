@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $(".button-collapse").sideNav();
-    
-    
+
+
     $(".sidebar-nav li a")
         .filter(function () {
         var val = false;
@@ -17,6 +17,6 @@ $(document).ready(function(){
         console.log(val);
         return val;
     })
-    .parent()
-    .addClass("active");
+        .parent()
+        .addClass("active");
 });
