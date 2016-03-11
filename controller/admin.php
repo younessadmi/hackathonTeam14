@@ -16,12 +16,16 @@ class adminController extends baseController {
         $this->registry->template->show('rooms/index');
     }
     
+    public function booking(){        
+        $this->registry->template->show('booking/index');
+    }
+    
     public function customers(){        
         $this->registry->template->show('customers/index');
     }
     
-    public function bills(){        
-        $this->registry->template->show('bills/index');
+    public function invoices(){        
+        $this->registry->template->show('invoices/index');
     }
 }
 ?>

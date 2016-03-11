@@ -37,10 +37,10 @@
             <div id="wrapper">
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
-                        <a href="<?php echo BASE_URL;?>admin/customers"><li class="center-align sidebar-icon"><i class="fa fa-user fa-2x"></i></li></a>
-                        <a href="<?php echo BASE_URL;?>admin/bill"><li class="center-align sidebar-icon"><i class="fa fa-dollar fa-2x"></i></li></a>
-                        <a href="<?php echo BASE_URL;?>admin/rooms"><li class="center-align sidebar-icon"><i class="fa fa-bed fa-2x"></i></li></a>
-                        <a href="<?php echo BASE_URL;?>admin/booking"><li class="center-align sidebar-icon"><i class="fa fa-calendar fa-2x"></i></li></a>
+                        <li class="center-align sidebar-icon"><a href="<?php echo BASE_URL;?>admin/customers"><i class="fa fa-user fa-2x"></i></a></li>
+                        <li class="center-align sidebar-icon"><a href="<?php echo BASE_URL;?>admin/invoices"><i class="fa fa-dollar fa-2x"></i></a></li>
+                        <li class="center-align sidebar-icon"><a href="<?php echo BASE_URL;?>admin/rooms"><i class="fa fa-bed fa-2x"></i></a></li>
+                        <li class="center-align sidebar-icon"><a href="<?php echo BASE_URL;?>admin/booking"><i class="fa fa-calendar fa-2x"></i></a></li>
                     </ul>
                 </div>
                 <span id="picture-info-hidden" style="display:none"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
@@ -49,12 +49,7 @@
                         <img src="<?php echo BASE_URL;?>img/bestwestern.png" id="brand"/>
                     </a>
                     <div id="infos-sidebar">
-                        <span id="picture-info"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
+
                     </div>
 
                 </div>
