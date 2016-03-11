@@ -33,7 +33,7 @@
     </head>
     <body>
         <header>
-            <?php if($admin){ ?>
+            <?php if(isset($admin) && $admin){ ?>
             <span id="base-url" style="display:none"><?php echo BASE_URL;?></span>
             <div id="wrapper">
                 <div id="sidebar-wrapper">
