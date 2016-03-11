@@ -17,6 +17,9 @@ $.fn.dataTable.ext.search.push(
 
 $(document).ready(function(){
 
+    $baseUrl = $('#base-url').html();
+    $idUrl = 0;
+    
     $('select').material_select();
     $('.caret').html("");
 
@@ -35,33 +38,49 @@ $(document).ready(function(){
                 $tr.css("border","solid 1px #38A7C6");
             });
 
-            if($('#datatable tbody tr').length > 1){
-                $('#datatable tbody tr').on('click', function(){
-                    $info = $(this).children().last().children();
+
+            $('#datatable tbody tr').on('click', function(){
+                $('#infos-sidebar').html("");
+                $info = $(this).children().last().children();
+                if($info.length > 0){
+
 
                     $('#infos-sidebar').html('<div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
 
                     $('#infos-sidebar').fadeOut( "slow", function() {
                         $('#infos-sidebar').html("");
+
                         $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>')
                         $('#infos-sidebar').append($imgEnd);
+
                         $info.each( function(e){
                             if($(this).attr("name") != "id")
                                 $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
 
                         });
 
-                        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>');
-                        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>');
-                        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambre</a></p>');
+                        $('#infos-sidebar').append(
+                            '<p><a href="'+$baseUrl+'admin/invoices?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>'
+                        );
+                        $('#infos-sidebar').append(
+                            '<p><a href="'+$baseUrl+'admin/booking?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>'
+                        );
+                        $('#infos-sidebar').append(
+                            '<p><a href="'+$baseUrl+'admin/rooms?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambres</a></p>'
+                        );
                         $('#infos-sidebar').fadeIn("slow", function(){
 
                         });
                         $('.btn-infos').fadeIn("slow");
-                    });
 
-                });
-            }
+                    });
+                }else{
+                    $('#infos-sidebar').append('<p>Aucunes Informations disponible</p>'); 
+                    $('#infos-sidebar').fadeIn("slow");
+                }
+
+            });
+
         }
     });
 
@@ -70,7 +89,7 @@ $(document).ready(function(){
         table.draw();
     } );
 
-    if($('#datatable tbody tr').length > 1){
+    if($('#datatable tbody tr').first().children().last().children().length > 0){
         $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>');
         $('#infos-sidebar').append($imgEnd);
         $('#datatable tbody tr').first().children().last().children().each( function(e){
@@ -78,13 +97,23 @@ $(document).ready(function(){
                 $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
         });
         $('#datatable tbody tr').first().css("border","solid 1px #38A7C6");
-        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>');
-        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>');
-        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambre</a></p>');
+        $('#infos-sidebar').append(
+            '<p><a href="'+$baseUrl+'admin/invoices?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>'
+        );
+        $('#infos-sidebar').append(
+            '<p><a href="'+$baseUrl+'admin/booking?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>'
+        );
+        $('#infos-sidebar').append(
+            '<p><a href="'+$baseUrl+'admin/rooms?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambres</a></p>'
+        );
         $('#infos-sidebar').fadeIn("slow", function(){
 
         });
         $('.btn-infos').fadeIn("slow");
+    }else{
+        $('#infos-sidebar').append('<p>Aucunes Informations disponible</p>'); 
+        $('#infos-sidebar').fadeIn("slow");
     }
+
 
 });

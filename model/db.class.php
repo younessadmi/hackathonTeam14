@@ -51,10 +51,43 @@ class DB {
     
     public function getCustomers(){
         $query = $this->connexion->prepare('SELECT * FROM client');
-        if($result = $query->execute()){
+        if($query->execute()){
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }else return $query->errorInfo();
     }
+    
+    public function getRooms(){
+        $return = [];
+        $rooms = $this->connexion->prepare('SELECT * FROM room');
+        if($rooms->execute()){
+            $return['rooms'] = $rooms->fetchAll(PDO::FETCH_ASSOC);
+            foreach($return['rooms'] as &$room){
+                 
+            }
+            return $return;
+        }else return $query->errorInfo();
+    }
+    
+    public function getInvoices(){
+        $return = [];
+        $rooms = $this->connexion->prepare('SELECT * FROM bill');
+        if($rooms->execute()){
+            $return['invoices'] = $rooms->fetchAll(PDO::FETCH_ASSOC);
+            foreach($return['invoices'] as &$invoice){
+                 
+            }
+            return $return;
+        }else return $query->errorInfo();
+    }
+    
+    public function getCustomer($id){
+        $query = $this->connexion->prepare('SELECT * FROM client WHERE id = ?');
+        if($query->execute([$id])){
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        }else return $query->errorInfo();
+    }
+    
+    
     
     public function getBill($id){
         $return = [];

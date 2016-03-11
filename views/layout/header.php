@@ -50,7 +50,23 @@
                         <img src="<?php echo BASE_URL;?>img/bestwestern.png" id="brand"/>
                     </a>
                     <div id="infos-sidebar">
-
+                        <?php if($customer) { ?>
+                            <p name="id"><?php echo $user['id'] ?></p>
+                            <p name="Nom"><?php echo $user['name'].' '.$user['firstname'] ?></p>
+                            <p name="Grade"><?php echo $user['rank'] ?></p>
+                            <p name="Pays"><?php echo $user['country'] ?></p>
+                            <p name="Société"><?php echo $user['company'] ?></p>
+                            <p name="Email"><?php echo $user['email'] ?></p>
+                            <p name="Téléphone"><?php echo $user['phone'] ?></p>
+                            <p name="Addresse"><?php echo $user['address'] ?></p>
+                            <p name="Présent">
+                                <?php if($user['present']){ ?>
+                                    OUI
+                                <?php }else{ ?>
+                                    NON
+                                <?php }?>
+                            </p>
+                        <?php } ?>  
                     </div>
 
                 </div>

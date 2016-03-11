@@ -5,3 +5,11 @@ header nav {
 nav .brand-logo {
     left: 27%;
 }
+
+.paid {
+    color: #0da80d;
+}
+
+.waiting-for-payment {
+    color: #fda400;
+}
