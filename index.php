@@ -25,7 +25,7 @@ function __autoload($class_name) {
 }
 
 $registry = new registry;
-$registry->db = DB::getInstance($registry);
+$registry->db = db::getInstance($registry);
 $registry->router = new router($registry);
 $registry->router->setPath(__SITE_PATH.DIRECTORY_SEPARATOR.'controller');
 $registry->template = new template($registry);
