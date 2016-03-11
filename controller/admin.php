@@ -21,10 +21,11 @@ class adminController extends baseController {
     }
     
     public function customers(){        
+        $this->registry->template->customers = $this->registry->db->getCustomers();
         $this->registry->template->show('customers/index');
     }
     
-    public function invoices(){        
+    public function invoices(){
         $this->registry->template->show('invoices/index');
     }
 }

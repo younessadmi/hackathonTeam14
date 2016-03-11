@@ -1,197 +1,91 @@
-<div class="container">
-    <div class="row">
-        <div class="col s2 offset-s5 title">
-            ROOMS
-        </div>
-    </div>
-    
-    <div class="row label-rooms">
-        <div class="col s1 index-list">N°</div>
-        <div class="col s9 index-list">INFORMATIONS</div>
-        <div class="col s2 index-list">ETAT</div>
-    </div>
-    <div class="row label-fixed" style="display:none">
-        <div class="col s1 index-list">N°</div>
-        <div class="col s9 index-list">INFORMATIONS</div>
-        <div class="col s2 index-list">ETAT</div>
-    </div>
-    
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">01</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 King</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef,  ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">02</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 Double</span>
-                <span class="pull-right"><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique:</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-times fa-2x status-icon not-good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon not-good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">03</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 2 Simple</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon not-good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">04</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 Queen</span>
-                <span class="pull-right"><i class="fa fa-user fa-1x"></i> Mr Sadmi</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef, ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">05</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 King</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef </span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">06</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 Double</span>
-                <span class="pull-right"><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique:</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-clock-o fa-2x status-icon not-good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">07</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 2 Simple</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique:</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon not-good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">08</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 Queen</span>
-                <span class="pull-right"><i class="fa fa-user fa-1x"></i> Mr Sadmi</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">09</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 King</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef,  ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon not-good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    <a>
-        <div class="row list">
-            <div class="col s1 index-list">10</div>
-            <div class="col s9">
-                <span><i class="fa fa-bed fa-1x"></i> 1 Double</span>
-                <span class="pull-right"><i class="fa fa-user fa-1x"></i> Mr Anderson</span>
-                <div class="divider"></div>
-                <span>Besoin Spécifique: fezfzef, ezfezfez</span>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-check fa-2x status-icon good"></i>
-            </div>
-            <div class="col s1 status-list">
-                <i class="fa fa-recycle fa-2x status-icon good"></i>
-            </div>
-        </div>
-    </a>
-    
-    <div class="col s12 pagination-custom">
-        <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-        </ul>
-    </div>
-</div>
+<div class="container-custom">
 
+    <div class="container-title row">
+        CHAMBRES
+    </div>
+    
+    <div class="datatable filter row">
+        <div class="input-field col s1">
+            <input id="id" type="text" class="validate">
+            <label for="last_name">ID</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="grade" type="text" class="validate">
+            <label for="name">Grade</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="pays" type="text" class="validate">
+            <label for="name">Pays</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="societe" type="text" class="validate">
+            <label for="name">Société</label>
+        </div>        
+        <div class="input-field col s2">
+            <select>
+              <option value="" disabled selected>Présent</option>
+              <option value="1">Oui</option>
+              <option value="2">Non</option>
+              <option value="3">Tous</option>
+            </select>
+        </div>
+    </div>
+
+    <tbody>
+
+    </tbody>
+
+    <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Grade</th>
+                <th>Pays</th>
+                <th>Société</th>
+                <th>Présent</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <?php foreach ($rooms as &$value) { ?>
+            <tr>
+                <td name="id"><?php echo $value['id'] ?></td>
+                <td name="Nom"><?php echo $value['name'].' '.$value['firstname'] ?></td>
+                <td name="Grade"><?php echo $value['rank'] ?></td>
+                <td name="Pays"><?php echo $value['country'] ?></td>
+                <td name="Société"><?php echo $value['company'] ?></td>
+                <td name="Présent">
+                    <?php if($value['present']){ ?>
+                        OUI
+                    <?php }else{ ?>
+                        NON
+                    <?php }?>
+                </td>
+                <td style="display:none">
+                    <p name="id"><?php echo $value['id'] ?></p>
+                    <p name="Nom"><?php echo $value['name'].' '.$value['firstname'] ?></p>
+                    <p name="Grade"><?php echo $value['rank'] ?></p>
+                    <p name="Pays"><?php echo $value['country'] ?></p>
+                    <p name="Société"><?php echo $value['company'] ?></p>
+                    <p name="Email"><?php echo $value['email'] ?></p>
+                    <p name="Téléphone"><?php echo $value['phone'] ?></p>
+                    <p name="Addresse"><?php echo $value['address'] ?></p>
+                    <p name="Présent">
+                        <?php if($value['present']){ ?>
+                            OUI
+                        <?php }else{ ?>
+                            NON
+                        <?php }?>
+                    </p>
+                </td>
+            </tr>
+            <?php } ?>
+            
+        </tbody>
+    </table>
+</div>

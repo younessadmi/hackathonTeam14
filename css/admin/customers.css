@@ -146,6 +146,10 @@ nav .brand-logo {
     text-align:center;
 }
 
+#picture-info img {
+    margin-bottom: 20px;
+}
+
 #datatable_filter {
     display:none;
 }
@@ -162,8 +166,8 @@ nav .brand-logo {
 }
 
 #infos-sidebar p {
-    padding-left:60px; 
-    padding-right:60px;
+    padding-left:40px; 
+    padding-right:40px;
     text-align:left;
 }
 
@@ -172,7 +176,7 @@ nav .brand-logo {
     height: 100%;
     text-align: left;
     background: #38A7C6;
-    margin-top:20px;
+    margin-top:10px;
 }
 
 .btn-infos:hover {

@@ -126,6 +126,10 @@ nav .brand-logo {
     color: #fff;
 }
 
+.table.table-bordered.dataTable {
+  border-collapse: collapse !important;
+}
+
 .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: #E6F2FF;
 }
@@ -140,6 +144,10 @@ nav .brand-logo {
 
 .status {
     text-align:center;
+}
+
+#picture-info img {
+    margin-bottom: 20px;
 }
 
 #datatable_filter {
@@ -158,7 +166,19 @@ nav .brand-logo {
 }
 
 #infos-sidebar p {
-    padding-left:60px; 
-    padding-right:60px;
+    padding-left:40px; 
+    padding-right:40px;
     text-align:left;
+}
+
+.btn-infos {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background: #38A7C6;
+    margin-top:10px;
+}
+
+.btn-infos:hover {
+    background-color: #fff;
 }

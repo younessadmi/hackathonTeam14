@@ -16,8 +16,7 @@ $(document).ready(function(){
         }
         console.log(val);
         return val;
-
     })
-        .parent()
-        .addClass("active");
+    .parent()
+    .addClass("active");
 });

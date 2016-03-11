@@ -48,4 +48,11 @@ class DB {
             }else return $query->errorInfo();
         }else return $query->errorInfo();
     }
+    
+    public function getCustomers(){
+        $query = $this->connexion->prepare('SELECT * FROM client');
+        if($result = $query->execute()){
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        }else return $query->errorInfo();
+    }
 }

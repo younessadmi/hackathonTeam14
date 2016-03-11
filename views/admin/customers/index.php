@@ -3,7 +3,7 @@
     <div class="container-title row">
         CLIENTS
     </div>
-
+    
     <div class="datatable filter row">
         <div class="input-field col s1">
             <input id="id" type="text" class="validate">
@@ -48,130 +48,45 @@
                 <th>Pays</th>
                 <th>Société</th>
                 <th>Présent</th>
+                <th style="display:none"></th>
             </tr>
         </thead>
         <tbody>
+            
+            <?php foreach ($customers as &$value) { ?>
             <tr>
-                <td name="id">1</td>
-                <td name="Nom">Will Smith</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">États-Unis</td>
-                <td name="Société">Overbrook Entertainment</td>
-                <td name="Présent">Oui</td>
+                <td name="id"><?php echo $value['id'] ?></td>
+                <td name="Nom"><?php echo $value['name'].' '.$value['firstname'] ?></td>
+                <td name="Grade"><?php echo $value['rank'] ?></td>
+                <td name="Pays"><?php echo $value['country'] ?></td>
+                <td name="Société"><?php echo $value['company'] ?></td>
+                <td name="Présent">
+                    <?php if($value['present']){ ?>
+                        OUI
+                    <?php }else{ ?>
+                        NON
+                    <?php }?>
+                </td>
+                <td style="display:none">
+                    <p name="id"><?php echo $value['id'] ?></p>
+                    <p name="Nom"><?php echo $value['name'].' '.$value['firstname'] ?></p>
+                    <p name="Grade"><?php echo $value['rank'] ?></p>
+                    <p name="Pays"><?php echo $value['country'] ?></p>
+                    <p name="Société"><?php echo $value['company'] ?></p>
+                    <p name="Email"><?php echo $value['email'] ?></p>
+                    <p name="Téléphone"><?php echo $value['phone'] ?></p>
+                    <p name="Addresse"><?php echo $value['address'] ?></p>
+                    <p name="Présent">
+                        <?php if($value['present']){ ?>
+                            OUI
+                        <?php }else{ ?>
+                            NON
+                        <?php }?>
+                    </p>
+                </td>
             </tr>
-            <tr>
-                <td name="id">2</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">3</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">4</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">5</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">6</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">7</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">8</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">9</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">10</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">11</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">12</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">13</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">14</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-            <tr>
-                <td name="id">15</td>
-                <td name="Nom">Doris Wilder</td>
-                <td name="Grade">Diamond Select</td>
-                <td name="Pays">Mexique</td>
-                <td name="Société">Google</td>
-                <td name="Présent">Oui</td>
-            </tr>
-
+            <?php } ?>
+            
         </tbody>
     </table>
 </div>

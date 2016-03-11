@@ -17,9 +17,12 @@ $.fn.dataTable.ext.search.push(
 
 $(document).ready(function(){
 
+    $baseUrl = $('#base-url').html();
+    $idUrl = 0;    
+    
     $('select').material_select();
     $('.caret').html("");
-    
+
     $img = $("#picture-info-hidden");
     var table = $('#datatable').DataTable( {
         "drawCallback": function( settings ) {
@@ -35,30 +38,40 @@ $(document).ready(function(){
                 $tr.css("border","solid 1px #38A7C6");
             });
 
-            $('#datatable tbody tr').on('click', function(){
-                $info = $(this).children();
+            if($('#datatable tbody tr').length > 1){
+                $('#datatable tbody tr').on('click', function(){
+                    $info = $(this).children().last().children();
 
-                $('#infos-sidebar').html('<div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
+                    $('#infos-sidebar').html('<div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
 
-                $('#infos-sidebar').fadeOut( "slow", function() {
-                    $('#infos-sidebar').html("");
-                    $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>')
-                    $('#infos-sidebar').append($imgEnd);
-                    $info.each( function(e){
-                        if($(this).attr("name") != "Status")
-                            $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
+                    $('#infos-sidebar').fadeOut( "slow", function() {
+                        $('#infos-sidebar').html("");
+                        $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>')
+                        $('#infos-sidebar').append($imgEnd);
+                        $info.each( function(e){
+                            if($(this).attr("name") != "id")
+                                $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
+                            else
+                                $idUrl = $(this).html();
+                        });
 
+                        $('#infos-sidebar').append(
+                            '<p><a href="'+$baseUrl+'admin/invoices?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>'
+                        );
+                        $('#infos-sidebar').append(
+                            '<p><a href="'+$baseUrl+'admin/booking?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>'
+                        );
+                        $('#infos-sidebar').append(
+                            '<p><a href="'+$baseUrl+'admin/rooms?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambres</a></p>'
+                        );
+                        $('#infos-sidebar').fadeIn("slow", function(){
+
+                        });
+                        $('.btn-infos').fadeIn("slow");
                     });
 
-                    $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos"><i class="fa fa-dollar left"></i>Factures</a></p>');
-                    $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos"><i class="fa fa-calendar left"></i>Reservations</a></p>');
-                    $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos"><i class="fa fa-bed left"></i>Chambre</a></p>');
-                    $('#infos-sidebar').fadeIn("slow", function(){
-
-                    });
                 });
-
-            });
+            }
         }
     });
 
@@ -67,15 +80,30 @@ $(document).ready(function(){
         table.draw();
     } );
 
-    $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>');
-    $('#infos-sidebar').append($imgEnd);
-    $('#datatable tbody tr').first().children().each( function(e){
-        if($(this).attr("name") != "Status")
-            $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
-    });
-    $('#datatable tbody tr').first().css("border","solid 1px #38A7C6");
-    $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos"><i class="fa fa-dollar left"></i>Factures</a></p>');
-    $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos"><i class="fa fa-calendar left"></i>Reservations</a></p>');
-    $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos"><i class="fa fa-bed left"></i>Chambre</a></p>');
+    if($('#datatable tbody tr').length > 1){
+        $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>');
+        $('#infos-sidebar').append($imgEnd);
+        $('#datatable tbody tr').first().children().last().children().each( function(e){
+            if($(this).attr("name") != "id")
+                $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
+            else
+                $idUrl = $(this).html();
+        
+        });
+        $('#datatable tbody tr').first().css("border","solid 1px #38A7C6");
+        $('#infos-sidebar').append(
+            '<p><a href="'+$baseUrl+'admin/invoices?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>'
+        );
+        $('#infos-sidebar').append(
+            '<p><a href="'+$baseUrl+'admin/booking?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>'
+        );
+        $('#infos-sidebar').append(
+            '<p><a href="'+$baseUrl+'admin/rooms?customer='+ $idUrl +'" class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambres</a></p>'
+        );
+        $('#infos-sidebar').fadeIn("slow", function(){
+
+        });
+        $('.btn-infos').fadeIn("slow");
+    }
 
 });

@@ -1,52 +1,90 @@
+$.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var min = parseInt( $('#min').val(), 10 );
+        var max = parseInt( $('#max').val(), 10 );
+        var age = parseFloat( data[3] ) || 0; // use data for the age column
+
+        if ( ( isNaN( min ) && isNaN( max ) ) ||
+            ( isNaN( min ) && age <= max ) ||
+            ( min <= age   && isNaN( max ) ) ||
+            ( min <= age   && age <= max ) )
+        {
+            return true;
+        }
+        return false;
+    }
+);
+
 $(document).ready(function(){
 
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 80) {
-            $('.label-fixed').addClass('fixed');
-        } else {
-            $('.label-fixed').removeClass('fixed');
+    $('select').material_select();
+    $('.caret').html("");
+
+    $img = $("#picture-info-hidden");
+    var table = $('#datatable').DataTable( {
+        "drawCallback": function( settings ) {
+            $('#datatable tbody tr').each(function(){
+                $(this).css("border","none");
+            });
+
+            $('#datatable tbody tr').on('click', function(){
+                $tr = $(this);
+                $('#datatable tbody tr').each(function(){
+                    $(this).css("border","none");
+                });
+                $tr.css("border","solid 1px #38A7C6");
+            });
+
+            if($('#datatable tbody tr').length > 1){
+                $('#datatable tbody tr').on('click', function(){
+                    $info = $(this).children().last().children();
+
+                    $('#infos-sidebar').html('<div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
+
+                    $('#infos-sidebar').fadeOut( "slow", function() {
+                        $('#infos-sidebar').html("");
+                        $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>')
+                        $('#infos-sidebar').append($imgEnd);
+                        $info.each( function(e){
+                            if($(this).attr("name") != "id")
+                                $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
+
+                        });
+
+                        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>');
+                        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>');
+                        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambre</a></p>');
+                        $('#infos-sidebar').fadeIn("slow", function(){
+
+                        });
+                        $('.btn-infos').fadeIn("slow");
+                    });
+
+                });
+            }
         }
     });
 
-    $('#datatable tbody tr').on('click', function(){
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#min, #max').keyup( function() {
+        table.draw();
+    } );
 
-        $img = $("#picture-info-hidden");
-        $info = $(this).children();
-
-        $('#infos-sidebar').html('<div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
-
-        $('#infos-sidebar').fadeOut( "slow", function() {
-            $('#infos-sidebar').html("");
-            $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>')
-            $('#infos-sidebar').append($imgEnd);
-            $info.each( function(e){
-
-                if($(this).attr("name") != "status")
-                    $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
-                else
-                    $('#infos-sidebar').append('<p>'+ $(this).html()+'</p>');
-            });
-            $('#infos-sidebar').fadeIn("slow", function(){
-
-            });
+    if($('#datatable tbody tr').length > 1){
+        $imgEnd = ('<span id="picture-info">'+$img.html()+'</span>');
+        $('#infos-sidebar').append($imgEnd);
+        $('#datatable tbody tr').first().children().last().children().each( function(e){
+            if($(this).attr("name") != "id")
+                $('#infos-sidebar').append('<p>'+$(this).attr("name")+':<b> '+ $(this).html()+'</b></p>');
         });
+        $('#datatable tbody tr').first().css("border","solid 1px #38A7C6");
+        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-dollar left"></i>Factures</a></p>');
+        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-calendar left"></i>Reservations</a></p>');
+        $('#infos-sidebar').append('<p><a class="waves-effect waves-light btn btn-infos" style="display:none"><i class="fa fa-bed left"></i>Chambre</a></p>');
+        $('#infos-sidebar').fadeIn("slow", function(){
 
-    });
+        });
+        $('.btn-infos').fadeIn("slow");
+    }
 
-    $(".sidebar-nav li")
-        .filter(function () {
-        var val = false;
-        var actual = location.href;
-        console.log(actual);
-        actual = actual.split("/");
-        console.log(actual);
-        catName = actual[3].split("?");
-        if (location.href == this.href || this.href == window.location.protocol + '//' + actual[2] + '/' + catName[0]) {
-            val = true;
-        }
-        console.log(val);
-        return val;
-
-    })
-        .addClass("active");
 });
