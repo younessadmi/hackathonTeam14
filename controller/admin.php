@@ -14,7 +14,7 @@ class adminController extends baseController {
     
     public function rooms(){        
         if(isset($_GET['customer'])){
-            //$this->registry->template->rooms = $this->registry->db->getRooms($_GET['customer']);
+            $this->registry->template->rooms = $this->registry->db->getCustomerRooms($_GET['customer']);
             $this->registry->template->customer = $this->registry->db->getCustomer($_GET["customer"]);
         }else
             $this->registry->template->rooms = $this->registry->db->getRooms();
@@ -43,7 +43,7 @@ class adminController extends baseController {
             $this->registry->template->show('invoices/show');
         }else{
             if(isset($_GET['customer'])){
-                //$this->registry->template->rooms = $this->registry->db->getRooms($_GET['customer']);
+                $this->registry->template->invoices = $this->registry->db->getCustomerInvoices($_GET['customer']);
                 $this->registry->template->customer = $this->registry->db->getCustomer($_GET['customer']);
             }else
                 $this->registry->template->invoices = $this->registry->db->getInvoices();

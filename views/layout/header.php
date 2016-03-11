@@ -50,7 +50,7 @@
                         <img src="<?php echo BASE_URL;?>img/bestwestern.png" id="brand"/>
                     </a>
                     <div id="infos-sidebar">
-                        <?php if($customer) { ?>
+                        <?php if(isset($customer) && $customer) { ?>
                             <span id="picture-info"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
                             <p name="Nom">Nom: <b><?php echo $customer['name'].' '.$customer['firstname'] ?></b></p>
                             <p name="Grade">Grade: <b><?php echo $customer['rank'] ?></b></p>
