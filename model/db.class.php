@@ -123,6 +123,17 @@ class DB {
         }else return $query->errorInfo();
     }
     
+    public function lastOrder(){
+        $query = $this->connexion->prepare('SELECT * FROM orderProduct WHERE order_date = (SELECT MAX(order_date) FROM orderProduct)');
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    public function newOrdersFromDate($date){
+        $query = $this->connexion->prepare('SELECT orderProduct.*, product.name, client.name AS client_name, client.firstname AS client_firstname FROM orderProduct JOIN product ON product.id = orderProduct.id_product JOIN client ON client.id = orderProduct.id_client WHERE order_date > ?');
+        $query->execute([$date]);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
     
     
     public function getBill($id){
