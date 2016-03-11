@@ -1,6 +1,19 @@
 $(document).ready(function () {
+    $('.collapsible').collapsible({
+        accordion : false
+    });
 
-	$('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    $('button.btn-cta-pdf').click(function(){
+        
+        //        $.ajax({
+        //            url: '<?php echo BASE_URL;?>mesFactures/exportPDF',
+        //            method: 'POST',
+        //            data: {  },
+        //            dataType: 'JSON'
+        //        }).done(function(data, textStatus, jqXHR){
+        //            console.log(data);
+        //        }).fail(function(jqXHR, textStatus, errorThrown){
+        //            console.error(jqXHR);
+        //        });
     });
 })

@@ -21,7 +21,7 @@ class DB {
         if(USING_A_DB == true){
             try
             {
-                $this->connexion = new PDO(DBTYPE.":host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASSWORD);
+                $this->connexion = new PDO(DBTYPE.":host=".DBHOST.";dbname=".DBNAME.";charset=utf8", DBUSER, DBPASSWORD);
             }catch(PDOException $e)
             {
                 print "Error new PDO: ".$e->getMessage()."<br/>";
@@ -32,8 +32,8 @@ class DB {
 
     public function orderProduct($productName, $idClient, $qte){
         $query = $this->connexion->prepare('
-        INSERT INTO orderProduct(id_product, id_client) 
-        SELECT (SELECT id FROM product WHERE name=? ), ?
+        INSERT INTO orderProduct(id_product, id_client, quantity_ordered) 
+        SELECT (SELECT id FROM product WHERE name=? ), ?, ?
         ');
 
         $query2 = $this->connexion->prepare('
@@ -42,10 +42,66 @@ class DB {
         WHERE name=?
         ');
 
-        if($query->execute([$productName, $idClient])){
+        if($query->execute([$productName, $idClient, $qte])){
             if($query2->execute([$qte, $productName])){
                 return true;
             }else return $query->errorInfo();
         }else return $query->errorInfo();
+    }
+
+    public function getBill($id){
+        $return = [];
+        $bill = $this->connexion->prepare('
+            SELECT *
+            FROM bill
+            WHERE id = ?
+        ');
+        $resa = $this->connexion->prepare('
+            SELECT *
+            FROM reservation
+            WHERE id = ?
+        ');
+        $orders = $this->connexion->prepare('
+            SELECT *
+            FROM orderProduct
+            WHERE order_date BETWEEN ? AND ?
+        ');
+        $products = $this->connexion->prepare('
+            SELECT *
+            FROM product
+        ');
+        $client = $this->connexion->prepare('
+            SELECT *
+            FROM client
+            WHERE id = ?
+        ');
+
+
+        if($bill->execute([$id])){
+            $return['bill'] = $bill->fetchAll(PDO::FETCH_ASSOC);
+            if(!empty($return['bill'])){
+                $return['bill'] = $return['bill'][0];
+                if($resa->execute([$return['bill']['id_reservation']])){
+                    if($client->execute([$return['bill']['id_client']])){
+                        $return['client'] = $client->fetchAll(PDO::FETCH_ASSOC);
+                        $return['client'] = $return['client'][0];
+                        $return['resa'] = $resa->fetchAll(PDO::FETCH_ASSOC);
+                        $return['resa'] = $return['resa'][0];
+                        if($orders->execute([$return['resa']['date_start'], $return['resa']['date_end']])){
+                            $return['orders'] = $orders->fetchAll(PDO::FETCH_ASSOC);
+                            if(!empty($return['orders'])){
+                                if($products->execute()){
+                                    while($product = $products->fetch(PDO::FETCH_ASSOC)){
+                                        $return['products'][$product['id']] = $product;
+                                    }
+                                }else return false;
+                            }
+                        }else return false;
+                    }else return false;
+                }else return false;
+            }
+        }else return false;
+
+        return $return;
     }
 }
