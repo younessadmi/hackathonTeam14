@@ -16,7 +16,7 @@
                                         <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
                                             <tbody>
                                                 <tr>
-                                                    <td align="left"> <img src="<?php echo BASE_URL;?>img/numerique BW_Master_Brand_Logo_RGB_300_DPI.jpg" style="width:100%" alt="logo" border="0" /></td>
+                                                    <td align="left"> <img src="<?php echo BASE_URL;?>img/numerique BW_Master_Brand_Logo_RGB_300_DPI.jpg" style="width:50%" alt="logo" border="0" /></td>
                                                 </tr>
                                                 <tr class="hiddenMobile">
                                                     <td height="40"></td>
