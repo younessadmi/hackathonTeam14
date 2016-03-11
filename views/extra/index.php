@@ -9,7 +9,7 @@
     <table>
         <tr>
             <td class="extra top-left">
-                <a href="<?php echo BASE_URL;?>extra/restauration"><i class="fa fa-hashtag fa-4x"></i></a>
+                <a href="<?php echo BASE_URL;?>extra/restauration"><i class="fa fa-cutlery fa-4x"></i></a>
             </td>
             <td class="extra top-right">
                 <a href="<?php echo BASE_URL;?>extra/hotel"><i class="fa fa-hashtag fa-4x"></i></a>
