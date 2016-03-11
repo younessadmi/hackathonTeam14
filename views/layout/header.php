@@ -46,25 +46,25 @@
                 </div>
                 <span id="picture-info-hidden" style="display:none"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
                 <div id="sidebar-wrapper-infos">
-                    <a href="#!" class="brand-logo center">
+                    <a href="<?php echo BASE_URL;?>admin/customers" class="brand-logo center">
                         <img src="<?php echo BASE_URL;?>img/bestwestern.png" id="brand"/>
                     </a>
                     <div id="infos-sidebar">
                         <?php if($customer) { ?>
-                            <p name="id"><?php echo $user['id'] ?></p>
-                            <p name="Nom"><?php echo $user['name'].' '.$user['firstname'] ?></p>
-                            <p name="Grade"><?php echo $user['rank'] ?></p>
-                            <p name="Pays"><?php echo $user['country'] ?></p>
-                            <p name="Société"><?php echo $user['company'] ?></p>
-                            <p name="Email"><?php echo $user['email'] ?></p>
-                            <p name="Téléphone"><?php echo $user['phone'] ?></p>
-                            <p name="Addresse"><?php echo $user['address'] ?></p>
-                            <p name="Présent">
-                                <?php if($user['present']){ ?>
+                            <span id="picture-info"><img src="<?php echo BASE_URL;?>img/WILLSMITH.png"/></span>
+                            <p name="Nom">Nom: <b><?php echo $customer['name'].' '.$customer['firstname'] ?></b></p>
+                            <p name="Grade">Grade: <b><?php echo $customer['rank'] ?></b></p>
+                            <p name="Pays">Pays: <b><?php echo $customer['country'] ?></b></p>
+                            <p name="Société">Société: <b><?php echo $customer['company'] ?></b></p>
+                            <p name="Email">Email: <b><?php echo $customer['email'] ?></b></p>
+                            <p name="Téléphone">Téléphone: <b><?php echo $customer['phone'] ?></b></p>
+                            <p name="Addresse">Addresse: <b><?php echo $customer['address'] ?></b></p>
+                            <p name="Présent">Présent:
+                                <b><?php if($customer['present']){ ?>
                                     OUI
                                 <?php }else{ ?>
                                     NON
-                                <?php }?>
+                                <?php }?></b>
                             </p>
                         <?php } ?>  
                     </div>

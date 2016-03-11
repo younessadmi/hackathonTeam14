@@ -179,6 +179,12 @@ nav .brand-logo {
     margin-top:10px;
 }
 
-.btn-infos:hover {
+.btn-infos:hover, .btn-action:hover {
     background-color: #fff;
+}
+
+.btn-action {
+    width: 100%;
+    text-align: middle;
+    background: #38A7C6;
 }

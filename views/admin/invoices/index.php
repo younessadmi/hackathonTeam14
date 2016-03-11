@@ -38,6 +38,7 @@
                 <th>N° Client</th>
                 <th>N° Reservation</th>
                 <th class="status">Status</th>
+                <th class="status">Action</th>
                 <th style="display:none"></th>
             </tr>
         </thead>
@@ -54,6 +55,9 @@
                     <?php }else{ ?>
                         <i class="fa fa-clock-o fa-2x waiting-for-payment"></i>
                     <?php }?>
+                </td>
+                <td name="Reservation">
+                    <a href="<?php echo BASE_URL;?>admin/invoices/<?php echo $value['id'] ?>" class="waves-effect waves-light btn btn-action"><i class="fa fa-share-square-o"></i></a>
                 </td>
                 <td style="display:none">
 

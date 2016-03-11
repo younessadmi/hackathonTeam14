@@ -110,10 +110,6 @@ $(document).ready(function(){
 
         });
         $('.btn-infos').fadeIn("slow");
-    }else{
-        $('#infos-sidebar').append('<p>Aucunes Informations disponible</p>'); 
-        $('#infos-sidebar').fadeIn("slow");
     }
-
 
 });

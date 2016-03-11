@@ -1,3 +1,3 @@
 <div class="container-custom">
-    ezfezf
+    <?php var_dump($bill); ?>
 </div>

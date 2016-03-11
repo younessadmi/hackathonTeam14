@@ -83,7 +83,7 @@ class DB {
     public function getCustomer($id){
         $query = $this->connexion->prepare('SELECT * FROM client WHERE id = ?');
         if($query->execute([$id])){
-            return $query->fetchAll(PDO::FETCH_ASSOC);
+            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }else return $query->errorInfo();
     }
     
